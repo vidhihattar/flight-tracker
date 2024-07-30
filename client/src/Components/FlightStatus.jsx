@@ -1,4 +1,3 @@
-// src/FlightStatus.js
 import React, { useEffect, useState } from 'react';
 import Modal from './TrackFlightModal';
 import '../styles/FlightStatus.css';
@@ -121,6 +120,7 @@ function FlightStatus() {
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
                 onSubmit={handleSubmitEmail}
+                selectedFlight={selectedFlight}
             />
         </div>
     );

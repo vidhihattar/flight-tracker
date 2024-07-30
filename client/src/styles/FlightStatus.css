@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #86c3ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    width: 100vw;
+    background-color: #334282;
+    padding: 0px 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.container {
+    width: 98vw;
+    margin: 20px 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    flex: 0 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+/* uncomment the code given below only if you want to otherwise delete*/
+
+/* li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    border-radius: 10px 0 0 10px;
+} */
+
+
+li.status-on-time::before {
+    background-color: #28a745; 
+}
+
+li.status-delayed::before {
+    background-color: #ffc107; 
+}
+
+li.status-cancelled::before {
+    background-color: #dc3545; 
+}
+
+strong {
+    color: #3b5fff;
+    display: block;
+    font-weight: 200;
+    margin-bottom: 10px;
+    padding: 4px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.airline-name {
+    background-color: #334282;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: -10px -10px 10px -10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.airline-name span:nth-child(2){
+    font-weight: 600;
+}
+
+.flight-id, .flight-status, .departure-gate, .arrival-gate,
+.scheduled-departure, .scheduled-arrival, .actual-departure, .actual-arrival {
+    background-color: #3b5fff;
+    padding-left: 15px;
+}
+
+.flight-id {
+    background-color: #4f60cc;
+}
+
+.flight-status {
+    background-color: #5b6dff;
+}
+
+
+
+.departure-gate {
+    background-color: #4c68cc;
+}
+
+.arrival-gate {
+    background-color: #5d70ff;
+}
+
+.scheduled-departure {
+    background-color: #5a75cc;
+}
+
+.scheduled-arrival {
+    background-color: #6a7aff;
+}
+
+.actual-departure {
+    background-color: #6770cc;
+}
+
+.actual-arrival {
+    background-color: #7885ff;
+}
+
+
+
+li strong:not(:first-of-type) {
+    background-color: transparent;
+    font-size: 12px;
+    display: flex;
+    border-bottom: 0.1px solid gray;
+    justify-content: space-between; 
+    font-weight: 500;
+}
+li strong:not(:first-of-type) span:nth-child(2){
+    font-weight: 600;
+    font-size: 13px;
+}
+
+
+.track-flight{
+    border: none !important;
+    color: #3b5fff;
+}
+
+.track-flight button{
+    border-radius: 8px;
+    border: 1.5px solid #3b5fff;
+    background-color: transparent;
+    color: #3b5fff;
+    padding: 5px 10px;
+    transition: 0.2s;
+}
+
+.track-flight button:hover{
+    transition: 0.2s;
+    background-color: #3b5fff;
+    color: white;
+    cursor:auto;
+}
+
+.flight-status.status-on-time {
+    background-color: #d7fee0; 
+    color: #00761c; 
+}
+
+.flight-status.status-delayed {
+    background-color: #fff3cd; 
+    color: #856404; 
+}
+
+.flight-status.status-cancelled {
+    background-color: #f8d7da; 
+    color: #721c24;
+}
+
+
+@media (max-width: 900px) {
+    li {
+        flex: 0 1 calc(50% - 20px);
+    }
+
+    .track-flight button{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 600px) {
+    li {
+        flex: 0 1 100%;
+    }
+}
